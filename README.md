@@ -1,1 +1,2 @@
 Hello Atom
+Hello Git!
