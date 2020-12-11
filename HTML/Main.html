@@ -1,0 +1,254 @@
+<!DOCtype html>
+<html lang="ko">
+
+<style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .recipe-head {
+        margin: -8px;
+    }
+
+    .recipe-nav {
+        background-color: rgb(252, 120, 102);
+        height: 55px;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+    }
+
+    .recipe-nav-ea {
+        list-style-type: none;
+        margin-top: -4px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #nav_li {
+        font-weight: bold;
+        color: white;
+        float: right;
+        margin-left: 60px;
+        margin-right: 100px;
+        padding-right: 50px;
+    }
+
+    #nav_li a {
+        display: block;
+        color: #000000;
+        padding: 8px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .banner {
+        position: relative;
+        width: 1000px;
+        height: 463px;
+        top: 100px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .banner ul {
+        position: absolute;
+        margin: 0px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .banner ul li {
+        float: left;
+        width: 1000px;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home_button .btn_add {
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+        background-color: rgb(26, 188, 156);
+        border: none;
+        color: seashell;
+        font-weight: bold;
+        float: right;
+        width: 200px;
+        padding: 7px;
+        margin-top: 50px;
+        margin-right: -300px;
+    }
+
+    #click-txt {
+        float: right;
+        margin-right: 150px;
+    }
+
+    #Box4 {
+        margin: 50px;
+    }
+
+    .recipe-footer-link li {
+        display: inline;
+        padding: 0 2px;
+    }
+
+    
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        var $banner = $(".banner").find("ul");
+
+        var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
+        var $bannerHeight = $banner.children().outerHeight(); // 높이
+        var $length = $banner.children().length;//이미지의 갯수
+        var rollingId;
+
+        //정해진 초마다 함수 실행
+        rollingId = setInterval(function () { rollingStart(); }, 4000);//다음 이미지로 롤링 애니메이션 할 시간차
+
+        function rollingStart() {
+            $banner.css("width", $bannerWidth * $length + "px");
+            $banner.css("height", $bannerHeight + "px");
+            //alert(bannerHeight);
+            //배너의 좌측 위치를 옮겨 준다.
+            $banner.animate({ left: - $bannerWidth + "px" }, 2000, function () { //숫자는 롤링 진행되는 시간이다.
+                //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+                $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+                //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+                $(this).find("li:first").remove();
+                //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+                $(this).css("left", 0);
+                //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+            });
+        }
+    });
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <title>MY Recipe, 지금 여기서 원하는 레시피를 만나보세요!</title>
+    <div class="recipe-head">
+        <div class="recipe-head-wrap">
+            <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg"
+                alt="main-image" width="100%">
+        </div>
+        <div class="recipe-nav">
+            <ul class="recipe-nav-ea">
+                <li id="nav_li"><a href="/notice"></a>로그아웃</li>
+                <li id="nav_li"><a href="/q&a"></a>로그인</li>
+                <li id="nav_li"><a href="/mypage"></a>마이페이지</li>
+                <li id="nav_li"><a href="/user-main"></a>사용자 레시피</li>
+                <li id="nav_li"><a href="/famous-main"></a>유명인사 레시피</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="recipe-masthead" id="content" role="main" tabindex="-1"
+        style="position: relative; padding: 30px 15px; text-align: center; background-color: #ffb6c1">
+        <div class="box-container"
+            style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
+            <img src="https://cdn3.iconfinder.com/data/icons/love-and-romance-vector-line-2/128/65-512.png"
+                style="margin: 0 auto 30px; background-color: transparent; width: 160px; height: 160px; display: block;">
+            <p class="lead"
+                style="margin: 0 auto 30px; font-size: 20px; color: #000000; font-weight: bold; line-height: 2.0;">MY
+                RECIPE는 사용자들에게 더 맛있는 밥상을 만들기 위해 노력하고 있습니다. <br>사용자들이 더 많은 레시피를 등록해주실 때에, 더 나은 서비스를 제공할 수 있습니다. <br> MY
+                RECIPE와 함께 더 나은 밥상을 만드시겠습니까?</p>
+        </div>
+    </main>
+
+    <dd class="container">
+    <dt>
+        <div class="contents">
+            <h5 id="click-txt">내 레시피를 사람들과 공유하고 싶다면? CLICK!!!</h5>
+            <div class="home_button">
+                <a href="#" target="_blank" class="btn_add">지금 내 레시피 공유하기!</a>
+            </div>
+    <dd>
+        <div class="banner" style="margin-left:305px;">
+            <h3>금주의 HOT한 레시피</h3>
+            <ul style="text-align: center;">
+                <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/08/15/e311c76bad47ad3ba144eac9c624310a1.jpg"
+                        width="1000px" height="400px"></li>
+                <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/08/01/43312099abd320e92af31b6c43e4eba11.jpg"
+                        width="1000px" height="400px"></li>
+                <li><img src="https://i.ytimg.com/vi/U75Zto-R_cY/maxresdefault.jpg" width="1000px" height="400px">
+                </li>
+                <li><img src="https://blog.kakaocdn.net/dn/rJTaR/btqIGmlwIiC/zKKLt0Nrp7UUmv87dftwP1/img.jpg"
+                        width="1000px" height="400px">
+                </li>
+            </ul>
+        </div>
+    </dd>
+
+    <dd>
+        <div class="banner" style="margin-top: 150px;">
+            <h3>요즘 사용자들은 이런 레시피에 관심이 많아요!</h3>
+            <ul style="text-align: center;">
+                <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/07/13/76f13d5ce267799f1c9c63289d165c2e1.jpg"
+                        width="1000px" height="400px"></li>
+                <li><img src="https://mblogthumb-phinf.pstatic.net/MjAxODA1MjhfMjk1/MDAxNTI3NDc3OTQyMDYz.nsJjCs-zq5CqCRjD5hhSz2vnE8N93D13Bx9T6r1FPJAg.HicKXBIbcIHl82GTpXST-DlkHT9OdhZscUOSKyxWxjgg.JPEG.newstarh/image_8343338951527477886403.jpg?type=w800"
+                        width="1000px" height="400px"></li>
+                <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/10/10/08a932fa28a3163f51ab21d7646068b51.jpg"
+                        width="1000px" height="400px">
+                </li>
+                <li><img src="https://i.ytimg.com/vi/LluhKLf7PAM/maxresdefault.jpg" width="1000px" height="400px">
+                </li>
+            </ul>
+        </div>
+    </dd>
+    </div>
+    </dt>
+    </dl>
+    <div class="container">
+        <dl class="main_four" id="Box4" style="border-bottom: 1px solid #e5e5e5;">
+            <dt>
+            <dd>
+                <h3 style="margin-top: 300px;">오늘은 이런 요리 어때요?</h3>
+                <ul class="slickList1 common_sp_list_ul ea4 slick-initialized slick-slider"
+                    style="width: 100%; text-align:left; padding-left:10px; margin-left: 10px; overflow:hidden; list-style: none;">
+                    <div style="width:300px; height:300px;; float:left; margin:20px; width: 30%;">
+                        <li><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile3.uf.tistory.com%2Fimage%2F113D604C503748A2220AB3"
+                                width="300px" height="300px" style="border-radius: 20px;"></li>
+
+                    </div>
+                    <div style="width:300px; height:300px; float:left; margin:20px; width: 30%;">
+                        <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/19/2fa4f7e872f1dca1c75a05e6a0ac63ca1.jpg"
+                                width="300px" height="300px" style="border-radius: 20px;"></li>
+                    </div>
+                    <div style="width:300px; height:300px; float:left; margin:20px; width: 30%;">
+                        <li><img src="https://i.ytimg.com/vi/OhwmDSiE3UQ/maxresdefault.jpg" width="300px" height="300px"
+                                style="border-radius: 20px;"></li>
+                    </div>
+                </ul>
+            </dd>
+            </dt>
+            </dd>
+        </dl>
+    </div>
+
+
+</head>
+<footer class="recipe-footer" role="contentinfo"
+    style="padding-top: 40px; padding-bottom: 40px; text-align: center; color: #767676;">
+    <div class="container" style="padding-right: 15px; padding-left: 15px; margin-left: auto; margin-right: auto;">
+        <p style="margin: 0 0 10px;">세상의 모든 사랑으로 정민지 임미혜에 의해 디자인되고 만들어졌습니다.</p>
+        <p style="margin: 0 0 10px;">팀장 정민지의 도움과 임미혜에 의해 유지보수 됩니다.</p>
+        <p style="margin: 0 0 10px;">코드는 MY RECIPE, 문서는 MY RECIPE에 의거하여 허가합니다.</p>
+        <ul class="recipe-footer-link" style="padding-left: 0; margin-top: 20px; text-decoration: none;">
+            <li>Currently v1.1.1</li>
+            <li>·</li>
+            <li>GitHub</li>
+            <li>·</li>
+        </ul>
+    </div>
+</footer>
+
+</html>
