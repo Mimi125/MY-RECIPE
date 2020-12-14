@@ -1,155 +1,54 @@
 <!DOCtype html>
 <html lang="ko">
 
-<style>
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-
-    .recipe-head {
-        margin: -8px;
-    }
-
-    .recipe-nav {
-        background-color: rgb(252, 120, 102);
-        height: 55px;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        margin-bottom: 16px;
-    }
-
-    .recipe-nav-ea {
-        list-style-type: none;
-        margin-top: -4px;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    #nav_li {
-        font-weight: bold;
-        color: white;
-        float: right;
-        margin-left: 60px;
-        margin-right: 100px;
-        padding-right: 50px;
-    }
-
-    #nav_li a {
-        display: block;
-        color: #000000;
-        padding: 8px;
-        text-decoration: none;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    .banner {
-        position: relative;
-        width: 1000px;
-        height: 463px;
-        top: 100px;
-        margin: 0 auto;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .banner ul {
-        position: absolute;
-        margin: 0px;
-        padding: 0;
-        list-style: none;
-    }
-
-    .banner ul li {
-        float: left;
-        width: 1000px;
-        height: 400px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .home_button .btn_add {
-        text-align: center;
-        text-decoration: none;
-        border-radius: 15px;
-        background-color: rgb(26, 188, 156);
-        border: none;
-        color: seashell;
-        font-weight: bold;
-        float: right;
-        width: 200px;
-        padding: 7px;
-        margin-top: 50px;
-        margin-right: -300px;
-    }
-
-    #click-txt {
-        float: right;
-        margin-right: 150px;
-    }
-
-    #Box4 {
-        margin: 50px;
-    }
-
-    .recipe-footer-link li {
-        display: inline;
-        padding: 0 2px;
-    }
-
-    
-</style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script language="JavaScript">
-    $(document).ready(function () {
-        var $banner = $(".banner").find("ul");
-
-        var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
-        var $bannerHeight = $banner.children().outerHeight(); // 높이
-        var $length = $banner.children().length;//이미지의 갯수
-        var rollingId;
-
-        //정해진 초마다 함수 실행
-        rollingId = setInterval(function () { rollingStart(); }, 4000);//다음 이미지로 롤링 애니메이션 할 시간차
-
-        function rollingStart() {
-            $banner.css("width", $bannerWidth * $length + "px");
-            $banner.css("height", $bannerHeight + "px");
-            //alert(bannerHeight);
-            //배너의 좌측 위치를 옮겨 준다.
-            $banner.animate({ left: - $bannerWidth + "px" }, 2000, function () { //숫자는 롤링 진행되는 시간이다.
-                //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
-                $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-                //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
-                $(this).find("li:first").remove();
-                //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
-                $(this).css("left", 0);
-                //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
-            });
-        }
-    });
-</script>
-
 <head>
     <meta charset="utf-8">
     <title>MY Recipe, 지금 여기서 원하는 레시피를 만나보세요!</title>
-    <div class="recipe-head">
-        <div class="recipe-head-wrap">
-            <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg"
-                alt="main-image" width="100%">
-        </div>
-        <div class="recipe-nav">
-            <ul class="recipe-nav-ea">
-                <li id="nav_li"><a href="/notice"></a>로그아웃</li>
-                <li id="nav_li"><a href="/q&a"></a>로그인</li>
-                <li id="nav_li"><a href="/mypage"></a>마이페이지</li>
-                <li id="nav_li"><a href="/user-main"></a>사용자 레시피</li>
-                <li id="nav_li"><a href="/famous-main"></a>유명인사 레시피</li>
-            </ul>
-        </div>
-    </div>
+    <style type="text/css">
+        @import url("CSS/recipe-css.css");
+    </style>
+    <link rel="stylesheet" href="/HTML/CSS/recipe-css.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            var $banner = $(".banner").find("ul");
+
+            var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
+            var $bannerHeight = $banner.children().outerHeight(); // 높이
+            var $length = $banner.children().length;//이미지의 갯수
+            var rollingId;
+
+            //정해진 초마다 함수 실행
+            rollingId = setInterval(function () { rollingStart(); }, 4000);//다음 이미지로 롤링 애니메이션 할 시간차
+
+            function rollingStart() {
+                $banner.css("width", $bannerWidth * $length + "px");
+                $banner.css("height", $bannerHeight + "px");
+                //alert(bannerHeight);
+                //배너의 좌측 위치를 옮겨 준다.
+                $banner.animate({ left: - $bannerWidth + "px" }, 2000, function () { //숫자는 롤링 진행되는 시간이다.
+                    //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+                    $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+                    //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+                    $(this).find("li:first").remove();
+                    //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+                    $(this).css("left", 0);
+                    //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+                });
+            }
+        });
+
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="header"></div>
 
     <main class="recipe-masthead" id="content" role="main" tabindex="-1"
         style="position: relative; padding: 30px 15px; text-align: center; background-color: #ffb6c1">
@@ -233,22 +132,7 @@
             </dd>
         </dl>
     </div>
-
-
-</head>
-<footer class="recipe-footer" role="contentinfo"
-    style="padding-top: 40px; padding-bottom: 40px; text-align: center; color: #767676;">
-    <div class="container" style="padding-right: 15px; padding-left: 15px; margin-left: auto; margin-right: auto;">
-        <p style="margin: 0 0 10px;">세상의 모든 사랑으로 정민지 임미혜에 의해 디자인되고 만들어졌습니다.</p>
-        <p style="margin: 0 0 10px;">팀장 정민지의 도움과 임미혜에 의해 유지보수 됩니다.</p>
-        <p style="margin: 0 0 10px;">코드는 MY RECIPE, 문서는 MY RECIPE에 의거하여 허가합니다.</p>
-        <ul class="recipe-footer-link" style="padding-left: 0; margin-top: 20px; text-decoration: none;">
-            <li>Currently v1.1.1</li>
-            <li>·</li>
-            <li>GitHub</li>
-            <li>·</li>
-        </ul>
-    </div>
-</footer>
+    <div class="footer"></div>
+</body>
 
 </html>
