@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <title>MyRecipe</title>
+</head>
+<body>
+    <div class="back">
+        <div class="center">
+            <div class="title">Join Us!</div>
+            <div class="join_back"> 
+                <form action="/users/register" method="post"> 
+                    <input type="text" placeholder="닉네임을 입력해주세요." class="input" id="input" name="name" value="<%= name %>" required> 
+                    <button class="ck_btn">중복확인</button><br>
+                    <input type="text" placeholder="이메일을 입력해주세요." class="input" id="input" name="email" value="<%= email %>"required> 
+                    <button class="ck_btn">중복확인</button><br>
+                    <input type="password" placeholder="비밀번호를 입력해주세요." class="input" name="password" value="<%= password %>" required><br>
+                    <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." class="input" name="rpassword" value="<%= rpassword %>" required><br>
+                    <div class="ck_div1"><input type="checkbox" name="checkbox"> 개인 정보 활용 동의</div>
+                    <div class="ck_div2"><input type="checkbox" name="checkbox"> 광고성 이메일 수신 동의 </div>
+                    
+                    <% if (errors.length > 0) { %>
+                      <% errors.forEach(err => { %>
+                          <div class="alert alert-danger"><%= err.text %></div>
+                      <% }); %>
+                    <% } %>
+
+                    <input type="submit" value="회원가입" class="submit">
+                </form>
+                <button class="cancle" onclick="history.back();">취소</button>
+            </div>
+        </div>
+        <div class="back_cover"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+
+    .home_button .btn_add {
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+        background-color: rgb(26, 188, 156);
+        border: none;
+        color: seashell;
+        font-weight: bold;
+        float: right;
+        width: 200px;
+        padding: 7px;
+        margin-top: -30px;
+        margin-right: 150px;
+    }
+
+    .btn_want {
+        background-color: rgb(231, 76, 60);
+        border: none;
+        float: left;
+        text-align: center;
+        text-decoration: none;
+        width: 70px;
+        color: seashell;
+        font-weight: bold;
+        border-radius: 15px;
+        padding: 7px;
+        margin-top: 50px;
+        margin-left: 150px;
+
+    }
+    
+    #click-txt {
+        float: right;
+        margin-top: -60px;
+        margin-right: 150px;
+    }
+
+    #Box4 {
+        margin: 100px;
+    }
+
+    .famous-recipe-detail {
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 330px;
+    }
+
+    .user-recipe-detail {
+        text-align: center;
+        margin-top: 100px;
+    }

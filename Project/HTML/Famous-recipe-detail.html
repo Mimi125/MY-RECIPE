@@ -1,0 +1,164 @@
+<!DOCtype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>유명인사 레시피 상세</title>
+    <style type="text/css">
+        @import url("CSS/recipe-css.css");
+      </style>
+      <link rel="stylesheet" href="/HTML/CSS/recipe-css.css">
+</head>
+
+<body>
+    <div class="recipe-head">
+        <div class="recipe-head-wrap">
+            <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg"
+                alt="main-image" width="100%">
+        </div>
+        <div class="recipe-nav">
+            <ul class="recipe-nav-ea">
+                <li id="nav_li"><a href="/notice"></a>로그아웃</li>
+                <li id="nav_li"><a href="/q&a"></a>로그인</li>
+                <li id="nav_li"><a href="/mypage"></a>마이페이지</li>
+                <li id="nav_li"><a href="/user-main"></a>사용자 레시피</li>
+                <li id="nav_li"><a href="/famous-main"></a>유명인사 레시피</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <dd class="container">
+    <dt>
+        <div class="contents" style="width: 100%; height:150px">
+            <h5 id="click-txt">내 레시피를 사람들과 공유하고 싶다면? CLICK!!!</h5>
+            <div class="home_button">
+                <a href="#" target="_blank" class="btn_add">지금 내 레시피 공유하기!</a>
+            </div>
+            <div class="want_button">
+                <a href="#" target="_blank" class="btn_want">찜하기</a>
+            </div>
+        </div>
+    </dt>
+    <dt>
+        <div style="width:100%; height:500px; text-align: center;">
+            <img src="https://i.ytimg.com/vi/iccIVKN-ZAo/maxresdefault.jpg" height="300px" width="1200px">
+            <div style="width: 100%; height: 120px; text-align: center; margin-top: -50px;">
+                <img src="data:image/png;base64,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"
+                    height="120px" width="120px" style="border-radius: 70%; overflow: hidden; object-fit: cover;">
+            </div>
+            <h3 style="margin-top: 5px;">백종원</h3>
+            <h1>"김치볶음밥이피오씁니다"</h1>
+        </div>
+        <div class="meterial" style="margin-left: 30px;">
+            <h4 style="color: gray">재료 : 밥 두공기, 피자치즈 1컵(100g), 김치(100g), 파 1컵, 기름 3-4큰술, 김가루(선택), 설탕 1큰술, 고춧가루
+                2큰술, 진간장 2큰술</h4>
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>식용유와 파를 넣어
+                중약불로 타지 않게 파기름을 충분히 내준다. (맛있는 냄새가 나기 시작한다.)</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F83bd51363a0243c180b534fd3aa26ad9.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>만든 파기름에 김치를
+                넣고, 중약불로 타지 않게 잘 저어가며 볶아준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F0481bc6774cf44d3ba65165260f1a12d.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>설탕과 간장을 후라이팬
+                가장자리에(꼭) 둘러준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2Ffd579831c1fb40e094d9a87c3d63858e.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>매운 고춧가루를 사용하면
+                매콤하게 김치볶음밥을 즐길 수 있다. 볶아주면, 김치베이스 완성~</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2Fa97aa78e13de4c02947785706bdc5747.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>밥 한공기에 김치베이스
+                2-3큰술을 넣어주고, 잘 비벼준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F09818045eb9b4a0987bd4678779aec8a.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>후라이팬에 비벼준 밥을
+                최대한 얇게 펴고, 약불로 누룽지를 만들어준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2Fc1a2ebc6772745cbaad179060cf58ad0.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>치즈를 가운데에 올리고,
+                뚜껑 덮고 30초!를 기다려준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F29e4dda0de8f40eaa9326e4167a35581.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>후라이팬에서 밑이 딱딱해진
+                밥을 반으로 접어준다.</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F41f6b2ce4542468f8398872922d589c8.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-detail" style="width: 100%; height: 200px; margin-top: 100px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/gray-business-toolbar/512/OK-3-512.png" height="60px"
+                width="60px" style="margin-top: 100px; margin-left: 150px;"><strong>그릇에 이쁘게 옮긴 뒤,
+                취향껏 김가루를 추가해서 먹는다!</strong>
+            <img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fcemmarketing%2F0fe0f05fb7dd460a8bdb1d4ec3ee940d.JPG"
+                height="250px" width="250px" style="float: right; margin-right: 250px;">
+        </div>
+    </dt>
+    <dt>
+        <div class="bottom" style="width: 100%; height: 600px; margin-top: 100px; text-align: center; border-bottom: 1px solid #e5e5e5;">
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/R6IT_f0XPT8" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="margin-left: 50px; margin-top: 100px;"></iframe>
+
+        </div>
+    </dt>
+    </dd>
+    <footer class="recipe-footer" role="contentinfo"
+        style="padding-top: 40px; padding-bottom: 40px; text-align: center; color: #767676;">
+        <div class="container" style="padding-right: 15px; padding-left: 15px; margin-left: auto; margin-right: auto;">
+            <p style="margin: 0 0 10px;">세상의 모든 사랑으로 정민지 임미혜에 의해 디자인되고 만들어졌습니다.</p>
+            <p style="margin: 0 0 10px;">팀장 정민지의 도움과 임미혜에 의해 유지보수 됩니다.</p>
+            <p style="margin: 0 0 10px;">코드는 MY RECIPE, 문서는 MY RECIPE에 의거하여 허가합니다.</p>
+            <ul class="recipe-footer-link" style="padding-left: 0; margin-top: 20px; text-decoration: none;">
+                <li>Currently v1.1.1</li>
+                <li>·</li>
+                <li>GitHub</li>
+                <li>·</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

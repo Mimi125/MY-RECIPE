@@ -1,0 +1,212 @@
+<!DOCtype html>
+<html lang="ko">
+<style>
+    label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .recipe-li {
+        
+    }
+
+    #recipe-input {
+        margin-left: 30px;
+        font-size: medium;
+    }
+
+    #add_btn {
+        border-radius: 10px;
+        background-color: rgb(26, 188, 156);
+        border: none;
+        color: seashell;
+        font-size: large;
+        font-weight: bold;
+        width: 100px;
+        padding: 7px;
+    }
+
+    #register_btn {
+        border-radius: 10px;
+        background-color: rgb(252, 120, 102);
+        border: none;
+        color: seashell;
+        font-size: large;
+        font-weight: bold;
+        float: right;
+        margin-right: 300px;
+        width: 100px;
+        padding: 7px;
+    }
+
+    #plus_btn {
+        border-radius: 5px;
+        background-color: rgb(94, 94, 94);
+        border: none;
+        color: seashell;
+        font-size: 14px;
+        font-weight: bold;
+        width: 80px;
+        padding: 7px;
+    }
+
+    .register_table{
+        line-height: 21px;
+        border-top: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        border-collapse: collapse;
+    }
+
+    .register_table th, .register_table td {
+        padding : 3px 0;
+        width: 300px;
+        height: 90px;
+        text-align: center;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>유명인사 레시피 상세</title>
+    <style type="text/css">
+        @import url("CSS/recipe-css.css");
+    </style>
+    <link rel="stylesheet" href="/HTML/CSS/recipe-css.css">
+</head>
+
+<body>
+    <div class="recipe-head">
+        <div class="recipe-head-wrap">
+            <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg"
+                alt="main-image" width="100%">
+        </div>
+        <div class="recipe-nav">
+            <ul class="recipe-nav-ea">
+                <li id="nav_li"><a href="/notice"></a>로그아웃</li>
+                <li id="nav_li"><a href="/q&a"></a>로그인</li>
+                <li id="nav_li"><a href="/mypage"></a>마이페이지</li>
+                <li id="nav_li"><a href="/user-main"></a>사용자 레시피</li>
+                <li id="nav_li"><a href="/famous-main"></a>유명인사 레시피</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <dd class="container">
+    <dt>
+        <div class="user-recipe-detail">
+            <img
+                src="https://postfiles.pstatic.net/MjAyMDEyMDNfMTQw/MDAxNjA2OTY4Mzg4Mjg5.d0Nf714iIaaxZro3PRaymuQ1762Di2KwpMGxk2i6ntsg.lvoV7n0OMYVZ2FpK_I8ygeYX8fK8jYoYIHrwB0ZyPkkg.JPEG.onewwenon/user.jpg?type=w773">
+        </div>
+    </dt>
+    <dt>
+        <div class="recipe-add"
+            style="width:1400px; height:1700px; margin-left: 120px; margin-top: 50px; background: rgba(236, 224, 224, 0.28);">
+            <ul style="list-style-type:none;">
+                <li id="recipe-li" style="padding-top: 100px; margin-top: 50px;
+                padding-left: 200px;">
+                    <label for="recipe-name">레시피명</label>
+                    <input type="text" name="recipe-name" id="recipe-input" style="margin-left: 70px;">
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;">
+                    <label for="ingrdiant">재료</label>
+                    <input type="text" name="ingrdiant" id="recipe-input" style="margin-left: 110px;">
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;">
+                    <label for="image">대표이미지</label>
+                    <button id="plus_btn" style="margin-left: 50px; margin-bottom: 10px;">사진등록</button>
+                    <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label><br>
+                    <label style="margin-left: 155px; margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label><br>
+                    <button id="plus_btn" style="margin-left: 155px; margin-top: 30px; margin-bottom: 10px;">사진등록</button>
+                    <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 16:9비율</label><br>
+                    <label style="margin-left: 155px; margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label><br>
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;">
+                    <label for="image">사진, 글 입력</label>
+                    <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label>
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;">
+                    <table class="register_table" border="1" width="800px">
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <th scope="col">1</th>
+                                <th scope="col">
+                                    <button id="plus_btn" style="margin-bottom: 10px;">사진등록</button><br>
+                                    <label style="margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label>
+                                </th>
+                                <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10" style="font-weight: bold;"></textarea></th>
+                            </tr>
+                            <tr>
+                                <th scope="col">2</th>
+                                <th scope="col">
+                                    <button id="plus_btn" style="margin-bottom: 10px;">사진등록</button><br>
+                                    <label style="margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label>
+                                </th>
+                                <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10" style="font-weight: bold;"></textarea></th>
+                            </tr>
+                            <tr>
+                                <th scope="col">3</th>
+                                <th scope="col">
+                                    <button id="plus_btn" style="margin-bottom: 10px;">사진등록</button><br>
+                                    <label style="margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label>
+                                </th>
+                                <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10" style="font-weight: bold;"></textarea></th>
+                            </tr>
+                            <tr>
+                                <th scope="col">4</th>
+                                <th scope="col">
+                                    <button id="plus_btn" style="margin-bottom: 10px;">사진등록</button><br>
+                                    <label style="margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label>
+                                </th>
+                                <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10" style="font-weight: bold;"></textarea></th>
+                            </tr>
+                            <tr>
+                                <th scope="col">5</th>
+                                <th scope="col">
+                                    <button id="plus_btn" style="margin-bottom: 10px;">사진등록</button><br>
+                                    <label style="margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label>
+                                </th>
+                                <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10" style="font-weight: bold;"></textarea></th>
+                            </tr>
+                        </tbody>
+                        </thead>
+                    </table>
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;">
+                    <button type="submit" id="add_btn">항목추가</button>
+                </li>
+                <li style="margin-top: 50px;
+                padding-left: 200px;"> 
+                    <button type="submit" id="register_btn">등록하기</button>
+                </li>
+            </ul>
+        </div>
+    </dt>
+
+    </dd>
+
+    <footer class="recipe-footer" role="contentinfo"
+        style="padding-top: 40px; padding-bottom: 40px; text-align: center; color: #767676;">
+        <div class="container" style="padding-right: 15px; padding-left: 15px; margin-left: auto; margin-right: auto;">
+            <p style="margin: 0 0 10px;">세상의 모든 사랑으로 정민지 임미혜에 의해 디자인되고 만들어졌습니다.</p>
+            <p style="margin: 0 0 10px;">팀장 정민지의 도움과 임미혜에 의해 유지보수 됩니다.</p>
+            <p style="margin: 0 0 10px;">코드는 MY RECIPE, 문서는 MY RECIPE에 의거하여 허가합니다.</p>
+            <ul class="recipe-footer-link" style="padding-left: 0; margin-top: 20px; text-decoration: none;">
+                <li>Currently v1.1.1</li>
+                <li>·</li>
+                <li>GitHub</li>
+                <li>·</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

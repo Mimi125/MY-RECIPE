@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<style>
+    .recipe-head {
+        margin: -8px;
+    }
+
+    .recipe-nav {
+        background-color: rgb(252, 120, 102);
+        height: 55px;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+    }
+
+    .recipe-nav-ea {
+        list-style-type: none;
+        margin-top: -4px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #nav_li {
+        font-weight: bold;
+        color: white;
+        float: right;
+        margin-left: 60px;
+        margin-right: 100px;
+        padding-right: 50px;
+    }
+
+    #nav_li a {
+        display: block;
+        color: #000000;
+        padding: 8px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .home_button .btn_add {
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+        background-color: rgb(26, 188, 156);
+        border: none;
+        color: seashell;
+        font-weight: bold;
+        float: right;
+        width: 200px;
+        padding: 7px;
+        margin-top: -30px;
+        margin-right: 150px;
+    }
+
+    #click-txt {
+        float: right;
+        margin-top: -60px;
+        margin-right: 150px;
+    }
+
+    #Box4 {
+        margin: 100px;
+    }
+
+    .user-recipe {
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 330px;
+    }
+
+    .recipe-footer-link li {
+        display: inline;
+        padding: 0 2px;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>사용자 레시피 메인</title>
+    <div class="recipe-head">
+        <div class="recipe-head-wrap">
+            <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg" alt="main-image" width="100%">
+        </div>
+        <div class="recipe-nav">
+            <ul class="recipe-nav-ea">
+                <li id="nav_li"><a href="/notice"></a>로그아웃</li>
+                <li id="nav_li"><a href="/q&a"></a>로그인</li>
+                <li id="nav_li"><a href="/mypage"></a>마이페이지</li>
+                <li id="nav_li"><a href="/user-main"></a>사용자 레시피</li>
+                <li id="nav_li"><a href="/famous-main"></a>유명인사 레시피</li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <dd class="container">
+    <dt>
+        <div class="contents">
+            <h5 id="click-txt">내 레시피를 사람들과 공유하고 싶다면? CLICK!!!</h5>
+            <div class="home_button">
+                <a href="#" target="_blank" class="btn_add">지금 내 레시피 공유하기!</a>
+            </div>
+        </div>
+        <div class="user-recipe">
+            <img
+                src="https://postfiles.pstatic.net/MjAyMDEyMDNfMTQw/MDAxNjA2OTY4Mzg4Mjg5.d0Nf714iIaaxZro3PRaymuQ1762Di2KwpMGxk2i6ntsg.lvoV7n0OMYVZ2FpK_I8ygeYX8fK8jYoYIHrwB0ZyPkkg.JPEG.onewwenon/user.jpg?type=w773">
+        </div>
+    </dt>
+    <dt>
+        <ul class="slickList1 common_sp_list_ul ea4 slick-initialized slick-slider"
+            style="width: 90%; text-align:left; padding-left:150px; margin-top: 60px; overflow:hidden; list-style: none;">
+            <div style="width:330px; height:300px; float:left; margin:10px; width: 30%;">
+                <li><a href="/user"><img
+                            src="https://www.hotelrestaurant.co.kr/data/photos/20180205/art_15175330519518_43b250.bmp"
+                            width="330px" height="250px" style="border-radius: 20px;"></a></li>
+                <h3 style="margin-left: 130px;">한식</h3>
+
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://crcf.cookatmarket.com/product/images/2019/10/sewu_1570434837_4368.jpg"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 150px;">치킨</h3>
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/09/25/51f41f9532dda40f4c8e68b8d09c7fd71.jpg"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 150px;">분식</h3>
+            </div>
+        </ul>
+    </dt>
+    <dt>
+        <ul class="slickList1 common_sp_list_ul ea4 slick-initialized slick-slider"
+            style="width: 90%; text-align:left; padding-left:150px; margin-top: 60px; overflow:hidden; list-style: none;">
+            <div style="width:330px; height:300px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/93d2e60994896de33988566c520d23d19059f7eb/d3c5acc9e6e0ddcd0fa592689dc888b7e4092a6d/3c72c926-b59d-4036-8acc-cbc5c2e067ed.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=cd5b8db1ba70f9708fcea023c4998023"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 130px;">양식</h3>
+
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://t1.daumcdn.net/cfile/tistory/991F28465C3887B62A" width="330px" height="250px"
+                        style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 120px;">베트남음식</h3>
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://travelblog.expedia.co.kr/wp-content/uploads/2016/06/%ED%83%9C%EA%B5%AD%EC%9D%8C%EC%8B%9D.jpg"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 130px;">태국음식</h3>
+            </div>
+        </ul>
+    </dt>
+    <dt>
+        <ul class="slickList1 common_sp_list_ul ea4 slick-initialized slick-slider"
+            style="width: 90%; text-align:left; padding-left:150px; margin-top: 60px; overflow:hidden; list-style: none; border-bottom: 1px solid #e5e5e5;">
+            <div style="width:330px; height:300px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://img-cf.kurly.com/shop/data/goodsview/20180307/gv10000019109_1.jpg" width="330px"
+                        height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 110px;">베이커리</h3>
+
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://mblogthumb-phinf.pstatic.net/20150103_25/skin_24_1420275048132wvLag_JPEG/%C1%DF%C8%AD%BF%E4%B8%AE_%C1%BE%B7%F9_%284%29.jpg?type=w2"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 150px;">중식</h3>
+            </div>
+            <div style="width:330px; height:250px; float:left; margin:10px; width: 30%;">
+                <li><img src="https://t1.daumcdn.net/liveboard/dailylife/cb1c75a796a54a46b6de500027382eb2.JPG"
+                        width="330px" height="250px" style="border-radius: 20px;"></li>
+                <h3 style="margin-left: 130px;">튀김요리</h3>
+            </div>
+        </ul>
+    </dt>
+    </dd>
+</head>
+<footer class="recipe-footer" role="contentinfo"
+    style="padding-top: 40px; padding-bottom: 40px; text-align: center; color: #767676;">
+    <div class="container" style="padding-right: 15px; padding-left: 15px; margin-left: auto; margin-right: auto;">
+        <p style="margin: 0 0 10px;">세상의 모든 사랑으로 정민지 임미혜에 의해 디자인되고 만들어졌습니다.</p>
+        <p style="margin: 0 0 10px;">팀장 정민지의 도움과 임미혜에 의해 유지보수 됩니다.</p>
+        <p style="margin: 0 0 10px;">코드는 MY RECIPE, 문서는 MY RECIPE에 의거하여 허가합니다.</p>
+        <ul class="recipe-footer-link" style="padding-left: 0; margin-top: 20px; text-decoration: none;">
+            <li>Currently v1.1.1</li>
+            <li>·</li>
+            <li>GitHub</li>
+            <li>·</li>
+        </ul>
+    </div>
+</footer>
+
+</html>

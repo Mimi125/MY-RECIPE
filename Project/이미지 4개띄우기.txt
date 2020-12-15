@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <style>
+    .recipe-head {
+        margin: -8px;
+    }
+
+    .recipe-nav {
+        background-color: rgb(252, 120, 102);
+        height: 55px;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+    }
+
+    .recipe-nav-ea {
+        list-style-type: none;
+        margin-top: -4px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #nav_li {
+        font-weight: bold;
+        color: white;
+        float: right;
+        margin-left: 50px;
+        margin-right: 70px;
+        padding-right: 50px;
+    }
+
+    #nav_li a {
+        display: block;
+        color: #000000;
+        padding: 8px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .home_button .btn_add {
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+        background-color: rgb(26, 188, 156);
+        border: none;
+        color: seashell;
+        font-weight: bold;
+        float: right;
+        width: 200px;
+        padding: 5px;
+        margin-top: -30px;
+        margin-right: 150px;
+    }
+
+    #click-txt {
+        float: right;
+        margin-top: -60px;
+        margin-right: 150px;
+    }
+
+    #Box4 {
+        margin: 100px;
+    }
+    
+    .famous-recipe {
+      text-align: center;
+      margin-top: 100px;
+      margin-left: 300px;
+    }
+  </style>
+
+<head>
+  <meta charset="utf-8">
+  <title>유명인사 레시피</title>
+  <div class="recipe-head">
+    <div class="recipe-head-wrap">
+      <img
+        src="https://postfiles.pstatic.net/MjAyMDEyMDJfMTYx/MDAxNjA2ODkwNzcxODg4.JAVjtQyeH5MovCUCX0z9Zy36eYgxh8LaVOOx9UX4QI4g.P7d22DCRcmafk9qHUREYXiCn6hJPKEcwORwDimHVwakg.JPEG.onewwenon/fruits-and-vegetables.jpg?type=w773"
+        alt="main-image" width="100%" , height="180">
+    </div>
+    <div class="recipe-nav">
+      <ul class="recipe-nav-ea">
+        <li id="nav_li"><a href="#"></a>마이페이지</li>
+        <li id="nav_li"><a href="#"></a>공지사항</li>
+        <li id="nav_li"><a href="#"></a>Q&A</li>
+        <li id="nav_li"><a href="#"></a>사용자 레시피</li>
+        <li id="nav_li"><a href="#"></a>유명인사 레시피</li>
+      </ul>
+    </div>
+  </div>
+
+  <dd class="container">
+    <dl class="home_container">
+      <dt>
+        <div class="contents">
+          <h5 id="click-txt">내 레시피를 사람들과 공유하고 싶다면? CLICK!!!</h5>
+          <div class="home_button">
+            <a href="#" target="_blank" class="btn_add">지금 내 레시피 공유하기!</a>
+          </div>
+        </div>
+        <div class="famous-recipe">
+          <img src="https://postfiles.pstatic.net/MjAyMDEyMDNfNjgg/MDAxNjA2OTYyMTU2NDg1.SA3qSW-mQcbdpfqHuCGXWTLTAsl9OwutF8cAAR-NQiIg.Ywarrnc6eLVD1YvaigL2QQy2LB7sOW2DvZ7BUwHXOWUg.JPEG.onewwenon/famous.jpg?type=w773">
+        </div>
+      </dt>
+      <dt>
+                <ul class="slickList1 common_sp_list_ul ea4 slick-initialized slick-slider"
+                    style="width: 100%; text-align:left; padding-left:130px; overflow:hidden; list-style: none;">
+                    <div style="width:250px; height:250px;; float:left; margin:10px; width: 20%;">
+                        <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/02/16/5d832cef4bf3b396dc80bee912b0ad001.jpg"
+                                width="250px" height="250px"></li>
+
+                    </div>
+                    <div style="width:250px; height:250px; float:left; margin:10px; width: 20%;">
+                        <li><img src="https://i2.wp.com/chopchopchoi.com/wp-content/uploads/2020/03/KimchiFriedRice-scaled.jpg?fit=1024%2C682"
+                                width="250px" height="250px"></li>
+                    </div>
+                    <div style="width:250px; height:250px; float:left; margin:10px; width: 20%;">
+                        <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2016/04/23/bb3238fef139c3454a9150f010e45e7f1.jpg"
+                                width="250px" height="250px"></li>
+                    </div>
+                    <div style="width:250px; height:250px; float:left; margin:10px; width: 20%;">
+                      <li><img src="https://recipe1.ezmember.co.kr/cache/recipe/2016/04/23/bb3238fef139c3454a9150f010e45e7f1.jpg"
+                              width="250px" height="250px"></li>
+                  </div>
+                </ul>
+      </dt>
+    </dl>
+  </dd>
+</head>
+
+</html>

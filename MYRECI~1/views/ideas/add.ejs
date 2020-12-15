@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/recipes_add.css" rel="stylesheet" type="text/css">
+  <link href="/css/headfooter.css" rel="stylesheet" type="text/css">
+  <title>MyRecipe</title>
+</head>
+
+<body>
+  <% include ../partials/header %>
+
+
+    <h1>
+      <a href="#" style="color: black;">
+        사용자레시피 등록화면
+      </a>
+    </h1>
+
+    <dd class="container">
+
+    <dt>
+      <% if (errors !=undefined) {%>
+        <% errors.forEach(err=> { %>
+          <div class="alert alert-danger">
+            <%= err.text %>
+          </div>
+          <% }) %>
+            <% } %>
+              <div class="card card-body"
+                style="width:1400px; height:1700px; margin-left: 120px; margin-top: 50px; background: rgba(236, 224, 224, 0.28);">
+                <form action="/ideas" method="post">
+                  <ul style="list-style-type:none;">
+                    <li id="recipe-li" style="padding-top: 100px; margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="title">레시피명</label>
+                      <input type="text" class="form-control" class="form-control" name="title" id="recipe-input"
+                        style="margin-left: 70px;">
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="title">재료</label>
+                      <input type="text" name="details" id="recipe-input" style="margin-left: 110px;">
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="image">대표이미지</label>
+                      <button id="plus_btn" style="margin-left: 50px; margin-bottom: 10px;">사진등록</button>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label><br>
+                      <label style="margin-left: 155px; margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label><br>
+                      <button id="plus_btn"
+                        style="margin-left: 155px; margin-top: 30px; margin-bottom: 10px;">사진등록</button>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 16:9비율</label><br>
+                      <label style="margin-left: 155px; margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label><br>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="image">사진, 글 입력</label>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <table class="register_table" border="1" width="800px">
+                        <thead>
+                        <tbody>
+                          <tr>
+                            <th scope="col">1</th>
+                            <th scope="col">
+                              <div class="image">
+                                <label id="image" for="image-regi">사진등록</label>
+                                <input type="file" id="image-regi" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                              <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
+                            </th>
+                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">2</th>
+                            <th scope="col">
+                              <div class="image">
+                                <label id="image" for="image-regi">사진등록</label>
+                                <input type="file" id="image-regi" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                              <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
+                            </th>
+                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">3</th>
+                            <th scope="col">
+                              <div class="image">
+                                <label id="image" for="image-regi">사진등록</label>
+                                <input type="file" id="image-regi" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                              <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
+                            </th>
+                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">4</th>
+                            <th scope="col">
+                              <div class="image">
+                                <label id="image" for="image-regi">사진등록</label>
+                                <input type="file" id="image-regi" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                              <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
+                            </th>
+                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">5</th>
+                            <th scope="col">
+                              <div class="image">
+                                <label id="image" for="image-regi">사진등록</label>
+                                <input type="file" accept="image/png, image/jpeg" id="image-regi"
+                                  style="margin-bottom: 10px;"></input><br>
+                              </div>
+                              <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
+                            </th>
+                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                        </tbody>
+                        </thead>
+                      </table>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <button type="submit" id="add_btn">항목추가</button>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 350px;">
+                      <button type="submit" class="btn-primary">등록하기</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+    </dt>
+    </dd>
+
+
+
+    <% include ../partials/footer %>
+</body>
+
+</html>
