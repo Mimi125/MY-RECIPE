@@ -44,25 +44,32 @@ const {ensureAuthenticated} = require('../libs/auth');
   router.post('/', (req, res) => {
     let errors = [];
     if (!req.body.title)
-      errors.push({text: 'Please add a title'});
-    if (!req.body.details)
-      errors.push({text: 'Please add a detail'});
+      errors.push({text: '레시피명을 입력해주세요!'});
+    if (!req.body.ingrediants)
+      errors.push({text: '재료를 입력해주세요!'});
 
     if (errors.length > 0) {
       res.render('ideas/add', {
         errors,
         title: req.body.title,
-        details: req.body.details
+        ingrediants: req.body.ingrediants,
+        contents1: req.body.contents1,
+        contents2: req.body.contents2,
+        contents3: req.body.contents3,
+        contents4: req.body.contents4,
+        contents5: req.body.contents5,
       });
     } else {
-      Idea.create({title: req.body.title, details: req.body.details, user: req.user.id}).then(() => {
+      Idea.create({title: req.body.title, ingrediants: req.body.ingrediants, 
+        contents1: req.body.contents1, contents2: req.body.contents2, contents3: req.body.contents3, contents4: req.body.contents4, contents5: req.body.contents5,
+         user: req.user.id}).then(() => {
         console.log('Idea created!');
         res.redirect('/ideas');
       }).catch(err => console.log(err));
     }
   });
 
-  // update process
+  // update processs
   router.put('/:id', (req, res) => {
     Idea.findByIdAndUpdate(req.params.id, req.body).then(idea => {
       console.log(`${idea.title} updated!`);

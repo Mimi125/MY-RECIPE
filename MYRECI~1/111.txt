@@ -1,0 +1,42 @@
+﻿- robo3t 실행 후 myrecipe 연결 ((최초실행시)myrecipe커넥션 create)
+- 프로젝트폴더에서 cmd 실행 -> node app
+- http://localhost:3000/
+
+
+
+프로젝트안에 폴더들이 많을텐데 views만 보면되!
+
+파일들 위치나 링크경로는 !절대! 바꾸면 안됨!!! 백퍼 오류날꺼ㅋㅋㅋ
+그래서 다 미리 적어놨으~
+css는 css폴더에 모아놨구 파일마다 상단에 미리 링크걸어놨으니까 
+참고해서 해당파일에 코드 적으면되(이해안되면 물어봐) 
+
+페이지명은 헤깔리니까 카카오oven에 등록해놓은 기준으로 설명할게
+
+
+
+partials/footer, header 푸터, 헤더
+
+index 메인화면
+
+users/login, register 로그인, 회원가입
+users/mypage, edit  마이페이지, 개인정보수정
+
+famous_re_category 유명인사레시피메인
+famous_re_main     유명인사레시피
+famous_re_detail    유명인사레시피상세
+
+user_re_category     사용자레시피메인
+ideas/index            사용자레시피
+ideas/user_re_detail  사용자레시피상세
+ideas/add              레시피등록페이지
+
+ideas/zzim_re         찜한레시피
+ideas/mine_re         등록한레시피
+
+
+
+ideas/edit         무시해 나중에 지울꺼!
+
+
+add.ejs class "btn btn-primary" 에서 btn-primary로 바꿨습니당.

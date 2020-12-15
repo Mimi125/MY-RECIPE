@@ -13,6 +13,22 @@
     margin-right: -300px;
 }
 
+.btn_want {
+    background-color: rgb(231, 76, 60);
+    border: none;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    width: 70px;
+    color: seashell;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 7px;
+    margin-top: 60px;
+    margin-left: 150px;
+
+}
+
 #click-txt {
     float: right;
     margin-top: 30px;

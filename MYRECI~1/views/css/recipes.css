@@ -9,13 +9,13 @@
     float: right;
     width: 200px;
     padding: 7px;
-    margin-top: -30px;
-    margin-right: 150px;
+    margin-top: 60px;
+    margin-right: -300px;
 }
 
 #click-txt {
     float: right;
-    margin-top: -60px;
+    margin-top: 30px;
     margin-right: 150px;
 }
 
@@ -30,3 +30,44 @@
     margin-top: 100px;
     margin-left: 370px;
 }
+
+.hello {
+        margin-top: -110px;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 150px;
+    }
+
+    .btn_edit {
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: rgb(127, 140, 141);
+        border: none;
+        color: seashell;
+        font-weight: bold;
+        width: 200px;
+        padding: 5px;
+        margin-left: 150px;
+    }
+
+    .jjim-reci img {
+        border-radius: 20px;
+        width: 250px;
+        height: 250px;
+        float: left;
+        margin: 40px;
+        width: 17%;
+    }
+
+    .small_title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .more {
+        font-size: 13px;
+        font-weight: bold;
+        float: right;
+        margin-right: 200px; 
+    }

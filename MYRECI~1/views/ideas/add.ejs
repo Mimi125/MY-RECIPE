@@ -36,18 +36,18 @@
                     <li id="recipe-li" style="padding-top: 100px; margin-top: 50px;
                 padding-left: 200px;">
                       <label for="title">레시피명</label>
-                      <input type="text" class="form-control" class="form-control" name="title" id="recipe-input"
-                        style="margin-left: 70px;">
+                      <input type="text" class="form-control" name="title" id="recipe-input"
+                        style="margin-left: 70px;" required>
                     </li>
                     <li style="margin-top: 50px;
                 padding-left: 200px;">
-                      <label for="title">재료</label>
-                      <input type="text" name="details" id="recipe-input" style="margin-left: 110px;">
+                      <label for="ingrediants">재료</label>
+                      <input type="text" name="ingrediants" id="recipe-input" style="margin-left: 110px;">
                     </li>
                     <li style="margin-top: 50px;
                 padding-left: 200px;">
                       <label for="image">대표이미지</label>
-                      <button id="plus_btn" style="margin-left: 50px; margin-bottom: 10px;">사진등록</button>
+                      <button id="plus_btn" namve="title_img" style="margin-left: 50px; margin-bottom: 10px;">사진등록</button>
                       <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label><br>
                       <label style="margin-left: 155px; margin-top: 10px; font-size: 17px;">파일명 : adcdc.jpg</label><br>
                       <button id="plus_btn"
@@ -74,7 +74,7 @@
                               </div>
                               <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
                             </th>
-                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                            <th scope="col"><textarea name="contents1" placeholder="내용을 입력해주세요." cols="40" rows="10"
                                 style="font-weight: bold;"></textarea></th>
                           </tr>
                           <tr>
@@ -86,7 +86,7 @@
                               </div>
                               <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
                             </th>
-                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                            <th scope="col"><textarea name="contents2" placeholder="내용을 입력해주세요." cols="40" rows="10"
                                 style="font-weight: bold;"></textarea></th>
                           </tr>
                           <tr>
@@ -98,7 +98,7 @@
                               </div>
                               <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
                             </th>
-                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                            <th scope="col"><textarea name="contents3" placeholder="내용을 입력해주세요." cols="40" rows="10"
                                 style="font-weight: bold;"></textarea></th>
                           </tr>
                           <tr>
@@ -110,7 +110,7 @@
                               </div>
                               <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
                             </th>
-                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                            <th scope="col"><textarea name="contents4" placeholder="내용을 입력해주세요." cols="40" rows="10"
                                 style="font-weight: bold;"></textarea></th>
                           </tr>
                           <tr>
@@ -123,7 +123,7 @@
                               </div>
                               <label style="margin-top: 10px; font-size: 17px;">파일명 : 선택된 파일 없음</label>
                             </th>
-                            <th scope="col"><textarea placeholder="내용을 입력해주세요." cols="40" rows="10"
+                            <th scope="col"><textarea name="contents5" placeholder="내용을 입력해주세요." cols="40" rows="10"
                                 style="font-weight: bold;"></textarea></th>
                           </tr>
                         </tbody>
