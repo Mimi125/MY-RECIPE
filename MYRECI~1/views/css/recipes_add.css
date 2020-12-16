@@ -33,7 +33,7 @@ label {
     float: right;
     margin-right: 370px;
 }
-
+/* 
 #image {
     color: seashell;
     font-size: medium;
@@ -51,7 +51,6 @@ label {
 }
 
 .image input[type="file"] {
-    /* 파일 필드 숨기기 */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -60,7 +59,7 @@ label {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
+} */
 
 
 .register_table {

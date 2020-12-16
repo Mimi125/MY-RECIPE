@@ -1,41 +1,4 @@
 
-    .recipe-head {
-        margin: -8px;
-    }
-
-    .recipe-nav {
-        background-color: rgb(252, 120, 102);
-        height: 55px;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        margin-bottom: 16px;
-    }
-
-    .recipe-nav-ea {
-        list-style-type: none;
-        margin-top: -4px;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    #nav_li {
-        font-weight: bold;
-        color: white;
-        float: right;
-        margin-left: 60px;
-        margin-right: 100px;
-        padding-right: 50px;
-    }
-
-    #nav_li a {
-        display: block;
-        color: #000000;
-        padding: 8px;
-        text-decoration: none;
-        text-align: center;
-        font-weight: bold;
-    }
-
     .home_button .btn_add {
         text-align: center;
         text-decoration: none;
