@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Idea = require('../models/Idea');
 const {ensureAuthenticated} = require('../libs/auth');
+var multer = require('multer');
 
   // router.get('/', ensureAuthenticated, (req, res) => {
   //   Idea.find({user: req.user.id}).sort({date: 'desc'}).then(ideas => {
@@ -9,6 +10,8 @@ const {ensureAuthenticated} = require('../libs/auth');
   //   }).catch(err => console.log(err));
   // });
 
+  var upload = multer({dest: 'uplaods/'})
+  
   router.get('/add', ensureAuthenticated, (req, res) => {
     res.render('ideas/add');
   });
@@ -41,7 +44,7 @@ const {ensureAuthenticated} = require('../libs/auth');
   });
 
   // post
-  router.post('/', (req, res) => {
+  router.post('/', upload.fields([{name: "image_title"}, {name: "image_header"}, {name: "image1"}, {name: "image2"}, {name: "image3"}, {name: "image4"}, {name: "image5"}]), (req, res) => {
     let errors = [];
     if (!req.body.title)
       errors.push({text: '레시피명을 입력해주세요!'});
@@ -53,6 +56,7 @@ const {ensureAuthenticated} = require('../libs/auth');
         errors,
         title: req.body.title,
         ingrediants: req.body.ingrediants,
+        images: req.files,
         contents1: req.body.contents1,
         contents2: req.body.contents2,
         contents3: req.body.contents3,
@@ -60,10 +64,11 @@ const {ensureAuthenticated} = require('../libs/auth');
         contents5: req.body.contents5,
       });
     } else {
-      Idea.create({title: req.body.title, ingrediants: req.body.ingrediants, 
+      Idea.create({title: req.body.title, ingrediants: req.body.ingrediants, images: req.files,
         contents1: req.body.contents1, contents2: req.body.contents2, contents3: req.body.contents3, contents4: req.body.contents4, contents5: req.body.contents5,
          user: req.user.id}).then(() => {
         console.log('Idea created!');
+        console.log(req.files);
         res.redirect('/ideas');
       }).catch(err => console.log(err));
     }
