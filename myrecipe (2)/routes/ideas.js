@@ -4,16 +4,10 @@ const Idea = require('../models/Idea');
 const {ensureAuthenticated} = require('../libs/auth');
 var multer = require('multer');
 
-  // router.get('/', ensureAuthenticated, (req, res) => {
-  //   Idea.find({user: req.user.id}).sort({date: 'desc'}).then(ideas => {
-  //     res.render('ideas/index', {ideas, user: req.user.name});
-  //   }).catch(err => console.log(err));
-  // });
-
   router.get('/', (req, res, next) => {
-    Idea.find({})                  // 1
-    .sort('date')            // 1
-    .exec((err, ideas) => {    // 1
+    Idea.find({})                  // Idea컬렉션을 탐색해서
+    .sort('date')            // 날짜 순으로 보여준다. 오래된 날짜가 제일 앞에있음/
+    .exec((err, ideas) => {
       if(err) return res.json(err);
       console.log(ideas);
       res.render('ideas', {error: '', title: 'Idea', ideas:ideas});
@@ -26,11 +20,7 @@ var multer = require('multer');
     res.render('ideas/add');
   });
 
-  // router.get('/', (req, res) => {
-  //   res.render('ideas/index', {error: ''});
-  // });
-
-  router.get('/user_re_detail/:id', (req, res) => {
+  router.get('/user_re_detail/:id', (req, res) => {  // index.ejs에서 받아온 id값을 저장한다.
     Idea.findOne({_id : req.params.id}).exec((err, ideas) =>{
       console.log(ideas);
       res.render('ideas/user_re_detail', {error: '', ideas:ideas});
@@ -64,19 +54,18 @@ var multer = require('multer');
     if (!req.body.ingrediants)
       errors.push({text: '재료를 입력해주세요!'});
 
-    if (errors.length > 0) {
+    if (errors.length > 0) { 
       res.render('ideas/add', {
         errors,
         title: req.body.title,
         ingrediants: req.body.ingrediants,
-        images: req.files,
         contents1: req.body.contents1,
         contents2: req.body.contents2,
         contents3: req.body.contents3,
         contents4: req.body.contents4,
         contents5: req.body.contents5,
       });
-    } else {
+    } else { // 비어있지 않다면, Idea컬렉션에 제목, 재료, 이미지, 내용을 적는다.
       Idea.create({title: req.body.title, ingrediants: req.body.ingrediants, images: req.files,
         contents1: req.body.contents1, contents2: req.body.contents2, contents3: req.body.contents3, contents4: req.body.contents4, contents5: req.body.contents5,
          user: req.user.name}).then(() => {
