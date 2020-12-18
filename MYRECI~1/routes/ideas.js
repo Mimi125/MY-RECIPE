@@ -10,18 +10,31 @@ var multer = require('multer');
   //   }).catch(err => console.log(err));
   // });
 
+  router.get('/', (req, res, next) => {
+    Idea.find({})                  // 1
+    .sort('date')            // 1
+    .exec((err, ideas) => {    // 1
+      if(err) return res.json(err);
+      console.log(ideas);
+      res.render('ideas', {error: '', title: 'Idea', ideas:ideas});
+    });
+  });
+
   var upload = multer({dest: 'uplaods/'})
   
   router.get('/add', ensureAuthenticated, (req, res) => {
     res.render('ideas/add');
   });
 
-  router.get('/', (req, res) => {
-    res.render('ideas/index', {error: ''});
-  });
+  // router.get('/', (req, res) => {
+  //   res.render('ideas/index', {error: ''});
+  // });
 
-  router.get('/user_re_detail', (req, res) => {
-    res.render('ideas/user_re_detail', {error: ''});
+  router.get('/user_re_detail/:id', (req, res) => {
+    Idea.findOne({_id : req.params.id}).exec((err, ideas) =>{
+      console.log(ideas);
+      res.render('ideas/user_re_detail', {error: '', ideas:ideas});
+    });
   });
 
   router.get('/zzim_re', ensureAuthenticated, (req, res) => {
@@ -66,14 +79,13 @@ var multer = require('multer');
     } else {
       Idea.create({title: req.body.title, ingrediants: req.body.ingrediants, images: req.files,
         contents1: req.body.contents1, contents2: req.body.contents2, contents3: req.body.contents3, contents4: req.body.contents4, contents5: req.body.contents5,
-         user: req.user.id}).then(() => {
+         user: req.user.name}).then(() => {
         console.log('Idea created!');
         console.log(req.files);
         res.redirect('/ideas');
       }).catch(err => console.log(err));
     }
   });
-
   // update processs
   router.put('/:id', (req, res) => {
     Idea.findByIdAndUpdate(req.params.id, req.body).then(idea => {
