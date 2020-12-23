@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/users_edit.css" rel="stylesheet" type="text/css">
+    <link href="/css/headfooter.css" rel="stylesheet" type="text/css">
+    <title>MyRecipe</title>
+
+    <script LANGUAGE="JavaScript">
+        function checkPw(form) {
+            pw1 = form.password.value;
+            pw2 = form.rpassword.value;
+
+            if (pw1 != pw2) {
+                alert("비밀번호가 일치하지 않습니다!")
+                return false;
+            }
+            else return true;
+        }
+    </script>
+</head>
+
+<body>
+    <% include ../partials/header %>
+
+
+        <div class="edit-user">
+            <img
+                src="https://blogfiles.pstatic.net/MjAyMDEyMjFfMTk2/MDAxNjA4NTE4NTk4NzQz.5wD9TUcpOyYXn6q1iqsV38aMxQ2jfmUgepkJvDdTSwkg.GrtH4tKADS45w8pTbRcoL6vhonrUdWs0iftWBTCiSv8g.PNG.onewwenon/user-infp.png">
+        </div>
+        <div class="back">
+            <div class="center">
+
+                <div class="colorback">
+                    <form onSubmit="return checkPw(this)" action="/users/<%= user._id %>?_method=PUT" method="post">
+                        <table>
+                            <tr>
+                                <th>프로필 이미지</th>
+                                <td><input type="file" class="input" id="inputimg" name="img" value="<%= user.img %>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>닉네임</th>
+                                <td><input type="text" placeholder="닉네임을 입력해주세요." class="input" id="input" name="name"
+                                        value="<%= user.name %>" required></td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호 변경</th>
+                                <td><input type="password" placeholder="비밀번호를 입력해주세요." class="input" name="password"
+                                        value="<%= user.password %>" required></td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호 확인</th>
+                                <td><input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." class="input"
+                                        name="rpassword" value="<%= user.rpassword %>" required></td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="수정하기" class="submit">
+                    </form>
+                    <form method="post" action="/users/<%= user._id %>?_method=DELETE">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="submit" class="delete" value="회원탈퇴">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <% include ../partials/footer %>
+</body>
+
+</html>

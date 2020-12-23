@@ -1,0 +1,78 @@
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#recipe-input {
+    margin-left: 30px;
+    font-size: medium;
+}
+
+#add_btn {
+    border-radius: 10px;
+    background-color: rgb(26, 188, 156);
+    border: none;
+    color: seashell;
+    font-size: large;
+    font-weight: bold;
+    width: 100px;
+    padding: 7px;
+}
+
+.btn-primary {
+    border-radius: 10px;
+    background-color: rgb(252, 120, 102);
+    border: none;
+    color: seashell;
+    font-size: large;
+    font-weight: bold;
+    width: 100px;
+    padding: 7px;
+    float: right;
+    margin-right: 370px;
+}
+/* 
+#image {
+    color: seashell;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.image {
+    border-radius: 5px;
+    background-color: rgb(94, 94, 94);
+    border: none;
+    margin-left: 75px;
+    cursor: pointer;
+    width: 80px;
+    padding: 7px;
+}
+
+.image input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+} */
+
+
+.register_table {
+    line-height: 21px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-collapse: collapse;
+}
+
+.register_table th,
+.register_table td {
+    padding: 3px 0;
+    width: 300px;
+    height: 90px;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}

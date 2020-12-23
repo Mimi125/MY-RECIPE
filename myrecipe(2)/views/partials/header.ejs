@@ -1,0 +1,19 @@
+<div class="recipe-head">
+  <div class="recipe-head-wrap">
+    <a href="/"> 
+      <img src="https://blogfiles.pstatic.net/MjAyMDEyMTBfMTk3/MDAxNjA3NTc0NjA3NTk5.dBhWApV3eb3Haati80QVrNHPIj9xXYMTCwvQvpVLWbEg.TO4kubYAAk4CFGgQxDkJYuBq-59tyDymCF261cdQTrIg.JPEG.onewwenon/fruits-and-vegetables.jpg"
+          alt="main-image" width="100%"></a> 
+  </div>
+  <div class="recipe-nav">
+      <ul class="recipe-nav-ea">
+        <% if (user) {%>
+          <li id="nav_li" class="nav_li"><a href="/users/logout">로그아웃</a></li>
+          <li id="nav_li"><a href="/users/mypage">마이페이지</a></li>
+        <% } else { %>
+          <li id="nav_li" class="nav_li"><a href="/users/login">로그인</a></li>
+        <% } %>
+          <li id="nav_li"><a href="/user_re_category">사용자 레시피</a></li>
+          <li id="nav_li"><a href="/famous_re_category">유명인사 레시피</a></li>
+      </ul>
+  </div>
+</div>

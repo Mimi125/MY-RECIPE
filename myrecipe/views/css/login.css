@@ -1,0 +1,96 @@
+.back{
+    position: relative;
+    background-image: url('https://blogfiles.pstatic.net/MjAyMDEyMTVfMTg2/MDAxNjA4MDM1MDIwNDIz.94tG0eSaEsdpjN6hygFIUJsaS60VLWbPqDJOnWLO8nEg.Hv6mBTMzmfa575ZrSX5_o52U6tnc-3u6EZKG8dSt2bYg.JPEG.onewwenon/background.jpg');                                                               
+    height: 100vh;
+    background-size: cover;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.back .center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);                                                                   
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+.join_back{
+    background-color:#A6A6A6;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.input{
+    width: 260px;
+    font-size: 16px;
+    padding: 12px 28px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+#input{
+    width: 180px;
+    margin-right: 0px;
+}
+.ck_btn{
+    background-color: rgb(26, 188, 156);;
+    width: 75px;
+    font-size: 12px;
+    font-weight: bold;
+    color: seashell;
+    padding: 12px 10px;
+    margin: 5px 5px 5px 0px;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+
+.ck_div1{
+    padding-right: 142px;
+    margin-top: 10px;
+}
+.ck_div2{
+
+    padding-right: 110px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.submit{
+    width: 320px;
+    background-color:#FF2424;
+    color: seashell;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 28px;
+    margin: 15px;
+    border-radius: 8px;
+    border: 2px solid #FF2424;
+}
+.submit:hover{
+    background-color: white;
+    color: #FF2424;
+}
+.cancle{
+    width: 320px;
+    background-color:gray;
+    color: seashell;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 28px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+
+.alert{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: white;  text-decoration: underline;}

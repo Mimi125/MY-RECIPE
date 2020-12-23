@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/recipes_add.css" rel="stylesheet" type="text/css">
+  <link href="/css/headfooter.css" rel="stylesheet" type="text/css">
+  <title>MyRecipe</title>
+</head>
+
+<body>
+  <% include ../partials/header %>
+
+
+    <h1>
+      <a href="#" style="color: black;">
+        사용자레시피 등록화면
+      </a>
+    </h1>
+
+    <dd class="container">
+
+    <dt>
+      <% if (errors !=undefined) {%>
+        <% errors.forEach(err=> { %>
+          <div class="alert alert-danger">
+            <%= err.text %>
+          </div>
+          <% }) %>
+            <% } %>
+              <div class="card card-body"
+                style="width:1400px; height:1700px; margin-left: 120px; margin-top: 50px; background: rgba(236, 224, 224, 0.28);">
+                <form action="/ideas" method="post" enctype="multipart/form-data">
+                  <ul style="list-style-type:none;">
+                    <li id="recipe-li" style="padding-top: 100px; margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="title">레시피명</label>
+                      <input type="text" class="form-control" name="title" id="recipe-input"
+                        style="margin-left: 70px;" required>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="ingrediants">재료</label>
+                      <input type="text" name="ingrediants" id="recipe-input" style="margin-left: 110px;">
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="image">대표이미지</label>
+                      <input type="file" name="image_title" id="title_img" accept="image/png, image/jpeg" style="margin-bottom: 8px; margin-left: 10px;"></input><br>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 115px;">추천 1:1비율</label><br>
+                      <input type="file" name="image_header" id="header_img" accept="image/png, image/jpeg" style="margin-bottom: 8px; margin-left: 115px; margin-top: 8px;"></input><br>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 115px;">추천 16:9비율</label><br>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <label for="image">사진, 글 입력</label>
+                      <label style="color: rgb(231, 76, 60); font-size: 18px; margin-left: 10px;">추천 1:1비율</label>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <table class="register_table" border="1" width="800px">
+                        <thead>
+                        <tbody>
+                          <tr>
+                            <th scope="col">1</th>
+                            <th scope="col">
+                              <div class="image">
+                                <input type="file" name="image1" accept="image/png, image/jpeg" id="img1" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                            </th>
+                            <th scope="col"><textarea name="contents1" placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">2</th>
+                            <th scope="col">
+                              <div class="image">
+                                <input type="file" name="image2" accept="image/png, image/jpeg" id="img2" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                            </th>
+                            <th scope="col"><textarea name="contents2" placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">3</th>
+                            <th scope="col">
+                              <div class="image">
+                                <input type="file" name="image3" accept="image/png, image/jpeg" id="img3" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                            </th>
+                            <th scope="col"><textarea name="contents3" placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">4</th>
+                            <th scope="col">
+                              <div class="image">
+                                <input type="file" name="image4" accept="image/png, image/jpeg" id="img4" style="margin-bottom: 10px;"></input><br>
+                              </div>
+                            </th>
+                            <th scope="col"><textarea name="contents4" placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                          <tr>
+                            <th scope="col">5</th>
+                            <th scope="col">
+                              <div class="image">
+                                <input type="file" name="image5" accept="image/png, image/jpeg" id="img5"
+                                  style="margin-bottom: 10px;"></input><br>
+                              </div>
+                            </th>
+                            <th scope="col"><textarea name="contents5" placeholder="내용을 입력해주세요." cols="40" rows="10"
+                                style="font-weight: bold;"></textarea></th>
+                          </tr>
+                        </tbody>
+                        </thead>
+                      </table>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 200px;">
+                      <button type="submit" id="add_btn">항목추가</button>
+                    </li>
+                    <li style="margin-top: 50px;
+                padding-left: 350px;">
+                      <button type="submit" class="btn-primary">등록하기</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+    </dt>
+    </dd>
+
+
+
+    <% include ../partials/footer %>
+</body>
+
+</html>
